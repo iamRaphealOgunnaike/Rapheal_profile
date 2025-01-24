@@ -1,7 +1,7 @@
 
 import LineGradient from '../components/LineGradient';
 import { motion } from 'framer-motion';
-// import { title } from 'framer-motion/client';
+
 
 const container = {
     hidden: {},
@@ -18,7 +18,9 @@ const projectVariant = {
 const Project =({ title}) => { 
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
         bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-   const projectTitle  = title.split("-8").join('-').toLowerCase();
+   
+   const projectTitle = title.split(" ").join("-").toLowerCase();
+
    return (
     <motion.div  variants={projectVariant} className='relative'>
         <div className={overlayStyles}>
